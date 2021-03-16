@@ -7,10 +7,10 @@ Pod::Spec.new do |s|
     Swift 私有组件库
     DESC
     
-    s.homepage         = 'https://github.com/wangdongyang/QNNLib.git'
+    s.homepage         = 'https://github.com/wangdongyang/QNNLib'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'joewang' => 'joewang@qianshengqian.com' }
-    s.source           = { :git => 'git@github.com:wangdongyang/QNNLib.git', :tag => s.version.to_s }
+    s.source           = { :git => 'https://github.com/wangdongyang/QNNLib.git', :tag => s.version.to_s }
     
     s.ios.deployment_target = '8.0'
     s.swift_version = '5.0'
