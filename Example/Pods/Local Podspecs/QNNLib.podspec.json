@@ -1,0 +1,116 @@
+{
+  "name": "QNNLib",
+  "version": "0.1.7",
+  "summary": "QNNLib",
+  "description": "钱牛牛官方私有库",
+  "homepage": "https://git.kuainiujinke.com/iOS/QNNLib",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "joewang": "joewang@qianshengqian.com"
+  },
+  "source": {
+    "git": "git@git.kuainiujinke.com:iOS/QNNLib.git",
+    "tag": "0.1.7"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "swift_versions": "5.0",
+  "resource_bundles": {
+    "QNNLib": [
+      "QNNLib/Assets/*.png"
+    ]
+  },
+  "frameworks": "UIKit",
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": "$(SDKROOT)/usr/include/libxml2"
+  },
+  "subspecs": [
+    {
+      "name": "Base",
+      "source_files": "QNNLib/Classes/Base/**/*",
+      "dependencies": {
+        "QNNLib/VenderLib": [
+
+        ]
+      }
+    },
+    {
+      "name": "Extension",
+      "source_files": "QNNLib/Classes/Extension/**/*",
+      "dependencies": {
+        "SDWebImage": [
+
+        ],
+        "QNNLib/Base": [
+
+        ],
+        "SnapKit": [
+
+        ]
+      }
+    },
+    {
+      "name": "Tools",
+      "source_files": "QNNLib/Classes/Tools/**/*",
+      "dependencies": {
+        "Fuzi": [
+
+        ],
+        "FCUUID": [
+
+        ],
+        "SDWebImage": [
+
+        ],
+        "SwiftyJSON": [
+
+        ],
+        "QNNLib/Extension": [
+
+        ],
+        "QNNLib/Base": [
+
+        ],
+        "Toast": [
+
+        ]
+      }
+    },
+    {
+      "name": "UIComponents",
+      "source_files": "QNNLib/Classes/UIComponents/**/*",
+      "dependencies": {
+        "FSPagerView": [
+
+        ],
+        "SnapKit": [
+
+        ],
+        "Then": [
+          "~> 2.6.0"
+        ],
+        "QNNLib/Extension": [
+
+        ],
+        "QNNLib/Tools": [
+
+        ],
+        "QNNLib/VenderLib": [
+
+        ],
+        "QNNLib/Base": [
+
+        ]
+      }
+    },
+    {
+      "name": "VenderLib",
+      "source_files": "QNNLib/Classes/VenderLib/**/*"
+    }
+  ],
+  "swift_version": "5.0"
+}

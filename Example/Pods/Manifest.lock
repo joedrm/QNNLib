@@ -1,0 +1,90 @@
+PODS:
+  - ESTabBarController-swift (2.8.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - FCUUID (1.3.1):
+    - UICKeyChainStore (~> 2.1.0)
+  - FSPagerView (0.8.3)
+  - Fuzi (3.1.2)
+  - QNNLib (0.1.7):
+    - QNNLib/Base (= 0.1.7)
+    - QNNLib/Extension (= 0.1.7)
+    - QNNLib/Tools (= 0.1.7)
+    - QNNLib/UIComponents (= 0.1.7)
+    - QNNLib/VenderLib (= 0.1.7)
+  - QNNLib/Base (0.1.7):
+    - QNNLib/VenderLib
+  - QNNLib/Extension (0.1.7):
+    - QNNLib/Base
+    - SDWebImage
+    - SnapKit
+  - QNNLib/Tools (0.1.7):
+    - FCUUID
+    - Fuzi
+    - QNNLib/Base
+    - QNNLib/Extension
+    - SDWebImage
+    - SwiftyJSON
+    - Toast
+  - QNNLib/UIComponents (0.1.7):
+    - FSPagerView
+    - QNNLib/Base
+    - QNNLib/Extension
+    - QNNLib/Tools
+    - QNNLib/VenderLib
+    - SnapKit
+    - Then (~> 2.6.0)
+  - QNNLib/VenderLib (0.1.7)
+  - SDWebImage (5.8.0):
+    - SDWebImage/Core (= 5.8.0)
+  - SDWebImage/Core (5.8.0)
+  - SnapKit (4.2.0)
+  - SwiftyJSON (5.0.0)
+  - Then (2.6.0)
+  - Toast (4.0.0)
+  - UICKeyChainStore (2.1.2)
+
+DEPENDENCIES:
+  - ESTabBarController-swift
+  - FBSnapshotTestCase (~> 2.1.4)
+  - QNNLib (from `../`)
+  - SnapKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ESTabBarController-swift
+    - FBSnapshotTestCase
+    - FCUUID
+    - FSPagerView
+    - Fuzi
+    - SDWebImage
+    - SnapKit
+    - SwiftyJSON
+    - Then
+    - Toast
+    - UICKeyChainStore
+
+EXTERNAL SOURCES:
+  QNNLib:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
+  Fuzi: dba7215e52fb39dd7b1a62f69ede1e30edff0ae1
+  QNNLib: 5f186105f56e3254316462ef2e8eef03fad20a4c
+  SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Then: 90cd104fd951cec1980a03f57704ad8f784d4d79
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
+
+PODFILE CHECKSUM: adb2a95082da2e1aa7079d47af8a5f5c2ab4e8d3
+
+COCOAPODS: 1.9.3

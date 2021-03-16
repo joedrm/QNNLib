@@ -1,0 +1,41 @@
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+#use_modular_headers!
+use_frameworks!
+
+platform :ios, '8.0'
+
+
+#pod 'SDWebImage' ,:modular_headers => true
+#pod  'Toast',:modular_headers => true
+#pod  'Fuzi',:modular_headers => true
+#pod  'UdeskSDK',:modular_headers => true
+
+target 'QNNLib_Example' do
+  pod 'QNNLib', :path => '../'
+
+  
+  pod 'SnapKit'
+  pod 'ESTabBarController-swift'
+  
+  target 'QNNLib_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end
+
+
+# Cocoapods optimization, always clean project after pod updating
+post_install do |installer|
+  Dir.glob(installer.sandbox.target_support_files_root + "Pods-*/*.sh").each do |script|
+    flag_name = File.basename(script, ".sh") + "-Installation-Flag"
+    folder = "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
+    file = File.join(folder, flag_name)
+    content = File.read(script)
+    content.gsub!(/set -e/, "set -e\nKG_FILE=\"#{file}\"\nif [ -f \"$KG_FILE\" ]; then exit 0; fi\nmkdir -p \"#{folder}\"\ntouch \"$KG_FILE\"")
+    File.write(script, content)
+  end
+end
+
