@@ -10,8 +10,9 @@
 ### 怎么使用私有库？
 由于需要快速更新和迭代这个私有库，避免长时间的去pod校验，暂时做本地依赖
 
-    pod 'QNNLib', :path => '../QNNLib'
-    
+    ```Ruby
+    pod 'QNNLib'
+    ```
 
 ![](http://wx2.sinaimg.cn/mw690/0060lm7Tly1fzs76e5muqj30l407mq4l.jpg)
 
@@ -41,7 +42,7 @@ v.qnn.testView()
 ![](http://wx2.sinaimg.cn/mw690/0060lm7Tly1fzs77kyhpgj30vo0g1akc.jpg)
 
 
-> 关于`extension QNN where Base : UIView`的实现，[看这里](https://git.kuainiujinke.com/iOS/QNNLib/blob/master/QNNLib/Classes/Base/QNN.swift)
+> 关于`extension QNN where Base : UIView`的实现，[看这里](https://github.com/wangdongyang/QNNLib/master/QNNLib/Classes/Base/QNN.swift)
 
 
 
@@ -49,7 +50,8 @@ v.qnn.testView()
 ### 其它相关命令
 本地校验私有库
 
-    pod lib lint --sources='https://github.com/CocoaPods/Specs.git,https://git.kuainiujinke.com/iOS/KNSpecs.Github'  --allow-warnings --verbose
+
+    pod lib lint --sources='https://github.com/CocoaPods/Specs.git,https://github.com/wangdongyang/QNNLib.git'  --allow-warnings --verbose
 
 
 安装打包插件
@@ -58,11 +60,11 @@ v.qnn.testView()
 
 打包为.framework文件
 
-    pod package QNNLib.podspec --force --spec-sources=https://git.kuainiujinke.com/iOS/KNSpecs.git,https://github.com/CocoaPods/Specs.Github
+    pod package QNNLib.podspec --force --spec-sources=https://github.com/wangdongyang/QNNLib.git,https://github.com/CocoaPods/Specs.Github
 
 打包为.a文件
 
-    pod package QNNLib.podspec --library --force --spec-sources=https://git.kuainiujinke.com/iOS/KNSpecs.git,https://github.com/CocoaPods/Specs.Github
+    pod package QNNLib.podspec --library --force --spec-sources=https://github.com/wangdongyang/QNNLib.git,https://github.com/CocoaPods/Specs.Github
 
 
 
