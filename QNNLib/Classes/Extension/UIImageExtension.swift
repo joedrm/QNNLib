@@ -10,8 +10,7 @@ import UIKit
 
 @objc public extension UIImage {
     
-    @objc
-    public class func imageWithColor(_ color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) -> UIImage? {
+    @objc class func imageWithColor(_ color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) -> UIImage? {
         let rect = CGRect(origin: .zero, size: size)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
         color.setFill()
@@ -24,7 +23,7 @@ import UIKit
     /**
      缩放图片
      */
-    @objc public func imageWithSize(size: CGSize) -> UIImage {
+    @objc func imageWithSize(size: CGSize) -> UIImage {
         UIGraphicsBeginImageContext(size)
         self.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         let currentImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -32,7 +31,7 @@ import UIKit
         return currentImage!
     }
     
-    @objc public func resizeToSize(_ targetSize: CGSize, padding: CGFloat = 0) -> UIImage? {
+    @objc func resizeToSize(_ targetSize: CGSize, padding: CGFloat = 0) -> UIImage? {
         let newSize = self.size.scaledSize(targetSize)
         
         let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
@@ -45,7 +44,7 @@ import UIKit
         return newImage
     }
     
-    @objc public class func snapshot(_ view: UIView) -> UIImage? {
+    @objc class func snapshot(_ view: UIView) -> UIImage? {
         if !Thread.isMainThread {
             assert(false, "UIImage.\(#function) must be called from main thread only.")
         }

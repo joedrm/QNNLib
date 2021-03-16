@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     
     s.homepage         = 'https://github.com/wangdongyang/QNNLib'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
-    s.author           = { 'joewang' => 'joewang@qianshengqian.com' }
+    s.author           = { 'joe' => 'wf_pinbo@163.com' }
     s.source           = { :git => 'https://github.com/wangdongyang/QNNLib.git', :tag => s.version.to_s }
     
     s.ios.deployment_target = '8.0'
@@ -25,11 +25,11 @@ Pod::Spec.new do |s|
     # 分类
     s.subspec 'Extension' do |c|
         c.source_files = 'QNNLib/Classes/Extension/**/*'
-        c.dependency 'SDWebImage'
+        c.dependency 'SDWebImage'#, '~> 5.10.4'
         c.dependency 'QNNLib/Base'
-        c.dependency 'SnapKit'
-        c.dependency 'Then', '~> 2.6.0'
-        c.dependency 'Toast'
+        c.dependency 'SnapKit'#, '~> 5.0.1'
+        c.dependency 'Then'#, '~> 2.6.0'
+        c.dependency 'Toast'#, '~> 4.0.0'
     end
     
     # 工具库
@@ -37,19 +37,19 @@ Pod::Spec.new do |s|
         m.source_files = 'QNNLib/Classes/Tools/**/*'
         m.dependency 'Fuzi'
         m.dependency 'FCUUID'
-        m.dependency 'SDWebImage'
-        m.dependency 'SwiftyJSON'
+#        m.dependency 'SDWebImage', '~> 5.10.4'
+        m.dependency 'SwiftyJSON'#, '~> 4.0'
         m.dependency 'QNNLib/Extension'
         m.dependency 'QNNLib/Base'
-        m.dependency 'Toast'
+        m.dependency 'Toast'#, '~> 4.0.0'
     end
     
     # 封装的组件库
     s.subspec 'UIComponents' do |t|
         t.source_files = 'QNNLib/Classes/UIComponents/**/*'
         t.dependency 'FSPagerView'
-        t.dependency 'SnapKit'
-        t.dependency 'Then', '~> 2.6.0'
+        t.dependency 'SnapKit'#, '~> 5.0.1'
+        t.dependency 'Then'#, '~> 2.6.0'
         t.dependency 'QNNLib/Extension'
         t.dependency 'QNNLib/Tools'
         t.dependency 'QNNLib/VenderLib'
@@ -59,6 +59,7 @@ Pod::Spec.new do |s|
     # 第三方库
     s.subspec 'VenderLib' do |v|
         v.source_files = 'QNNLib/Classes/VenderLib/**/*'
+        v.dependency 'TTTAttributedLabel'
         #v.vendored_frameworks = ['QNNLib/Classes/VenderLib/TCWebCodesSDK.framework']
         #v.vendored_libraries  = 'QNNLib/Classes/VenderLib/**/*.{a}'
     end

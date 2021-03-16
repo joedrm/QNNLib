@@ -16,7 +16,7 @@ target 'QNNLib_Example' do
   pod 'QNNLib', :path => '../'
 
   
-  pod 'SnapKit'
+#  pod 'SnapKit'
   pod 'ESTabBarController-swift'
   
   target 'QNNLib_Tests' do

@@ -43,7 +43,7 @@ public extension UIImageView {
     /// image fade in time is 0.65
     ///
     /// - Parameter urlString: image url string
-    public func image(urlString: String) {
+    func image(urlString: String) {
         if let url = URL(string: urlString) {
             self.sd_setImage(with: url, completed: { (image, error, cacheType, url) in
                 let animation = CATransition()
@@ -55,14 +55,14 @@ public extension UIImageView {
         }
     }
     
-    public func loadImage(urlStr: String) {
+    func loadImage(urlStr: String) {
         let url = URL(string: urlStr)
         if let url = url {
             self.sd_setImage(with: url)
         }
     }
     
-    public func loadImage(urlStr: String, placeholderImage image: UIImage?) {
+    func loadImage(urlStr: String, placeholderImage image: UIImage?) {
         let url = URL(string: urlStr)
         if let _ = image {
             self.sd_setImage(with: url, placeholderImage: image!)

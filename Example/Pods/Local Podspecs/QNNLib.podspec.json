@@ -1,19 +1,19 @@
 {
   "name": "QNNLib",
-  "version": "0.1.7",
+  "version": "0.1.1",
   "summary": "QNNLib",
-  "description": "钱牛牛官方私有库",
-  "homepage": "https://git.kuainiujinke.com/iOS/QNNLib",
+  "description": "Swift 私有组件库",
+  "homepage": "https://github.com/wangdongyang/QNNLib",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "joewang": "joewang@qianshengqian.com"
+    "joe": "wf_pinbo@163.com"
   },
   "source": {
-    "git": "git@git.kuainiujinke.com:iOS/QNNLib.git",
-    "tag": "0.1.7"
+    "git": "https://github.com/wangdongyang/QNNLib.git",
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "8.0"
@@ -50,6 +50,12 @@
         ],
         "SnapKit": [
 
+        ],
+        "Then": [
+
+        ],
+        "Toast": [
+
         ]
       }
     },
@@ -61,9 +67,6 @@
 
         ],
         "FCUUID": [
-
-        ],
-        "SDWebImage": [
 
         ],
         "SwiftyJSON": [
@@ -91,7 +94,7 @@
 
         ],
         "Then": [
-          "~> 2.6.0"
+
         ],
         "QNNLib/Extension": [
 
@@ -109,7 +112,12 @@
     },
     {
       "name": "VenderLib",
-      "source_files": "QNNLib/Classes/VenderLib/**/*"
+      "source_files": "QNNLib/Classes/VenderLib/**/*",
+      "dependencies": {
+        "TTTAttributedLabel": [
+
+        ]
+      }
     }
   ],
   "swift_version": "5.0"

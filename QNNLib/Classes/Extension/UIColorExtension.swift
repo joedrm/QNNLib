@@ -15,7 +15,7 @@ import UIKit
      - parameter hexString: 6位16进制颜色代码，支持前缀带“#”和"0x"的字符串
      - parameter alpha:     透明度
      */
-    @objc public convenience init(hexString: String, alpha: CGFloat = 1) {
+    @objc convenience init(hexString: String, alpha: CGFloat = 1) {
         var hex = hexString.lowercased().replacingOccurrences(of: "#", with: "")
         hex = hex.replacingOccurrences(of: "0x", with: "")
         
@@ -48,7 +48,7 @@ import UIKit
      - parameter hexString: 6位16进制颜色代码，支持前缀带“#”和"0x"的字符串
      - parameter alpha:     透明度
      */
-    @objc public convenience init(hexadecimalString: String, alpha: CGFloat = 1) {
+    @objc convenience init(hexadecimalString: String, alpha: CGFloat = 1) {
         var hex = hexadecimalString.lowercased().replacingOccurrences(of: "#", with: "")
         hex = hex.replacingOccurrences(of: "0x", with: "")
         
@@ -75,7 +75,7 @@ import UIKit
         self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: alpha)
     }
     
-    @objc public convenience init(decimalRed: Int, green: Int, blue: Int, alpha: CGFloat = 1) {
+    @objc convenience init(decimalRed: Int, green: Int, blue: Int, alpha: CGFloat = 1) {
         self.init(red: CGFloat(decimalRed) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: alpha)
     }
 }
