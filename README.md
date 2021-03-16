@@ -13,9 +13,6 @@
 pod 'QNNLib'
 ```
 
-![](http://wx2.sinaimg.cn/mw690/0060lm7Tly1fzs76e5muqj30l407mq4l.jpg)
-
-
 ### 时间线
 
 | tag | time | desc |
