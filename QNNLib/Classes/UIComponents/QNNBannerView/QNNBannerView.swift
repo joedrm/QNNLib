@@ -119,7 +119,7 @@ public extension QNNBannerView {
 
 // MARK: - FSPagerViewDataSource, FSPagerViewDelegate
 extension QNNBannerView: FSPagerViewDataSource, FSPagerViewDelegate {
-    public func numberOfItems(in pagerView: FSPagerView) -> Int {
+    open func numberOfItems(in pagerView: FSPagerView) -> Int {
         if imageArray.isEmpty {
             bannerNumberItems = imgsArray.count
             return imgsArray.count
@@ -127,10 +127,9 @@ extension QNNBannerView: FSPagerViewDataSource, FSPagerViewDelegate {
             bannerNumberItems = imageArray.count
             return imageArray.count
         }
-        
     }
     
-    public func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+    open func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: QNNBannerItemViewCell.defaultReusableId, at: index)
         if imageArray.isEmpty {
             cell.imageView?.image = imgsArray[index]
@@ -141,14 +140,14 @@ extension QNNBannerView: FSPagerViewDataSource, FSPagerViewDelegate {
         return cell
     }
     
-    public func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
+    open func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
         pagerView.deselectItem(at: index, animated: true)
         pagerView.scrollToItem(at: index, animated: true)
         pageControl.currentPage = index
         bannerSeleted?(index)
     }
     
-    public func pagerViewDidScroll(_ pagerView: FSPagerView) {
+    open func pagerViewDidScroll(_ pagerView: FSPagerView) {
         guard pageControl.currentPage != pagerView.currentIndex else {
             return
         }
@@ -176,21 +175,21 @@ class QNNBannerItemViewCell:  FSPagerViewCell{
     }
     
     /// 重写下面的属性去掉点击效果
-//    open override var isHighlighted: Bool {
-//        set {
-//            super.isHighlighted = false
-//        }
-//        get {
-//            return super.isHighlighted
-//        }
-//    }
-//
-//    open override var isSelected: Bool {
-//        set {
-//            super.isSelected = false
-//        }
-//        get {
-//            return super.isSelected
-//        }
-//    }
+    //    open override var isHighlighted: Bool {
+    //        set {
+    //            super.isHighlighted = false
+    //        }
+    //        get {
+    //            return super.isHighlighted
+    //        }
+    //    }
+    //
+    //    open override var isSelected: Bool {
+    //        set {
+    //            super.isSelected = false
+    //        }
+    //        get {
+    //            return super.isSelected
+    //        }
+    //    }
 }

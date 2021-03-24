@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'QNNLib'
-    s.version          = '1.0.1'
+    s.version          = '1.0.2'
     s.summary          = 'QNNLib'
     s.description      = <<-DESC
     Swift 私有组件库
