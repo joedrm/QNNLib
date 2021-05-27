@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'QNNLib'
-    s.version          = '1.0.2'
+    s.version          = '1.0.3'
     s.summary          = 'QNNLib'
     s.description      = <<-DESC
     Swift 私有组件库
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     s.author           = { 'joe' => 'wf_pinbo@163.com' }
     s.source           = { :git => 'https://github.com/wangdongyang/QNNLib.git', :tag => s.version.to_s }
     
-    s.ios.deployment_target = '8.0'
+    s.ios.deployment_target = '9.0'
     s.swift_version = '5.0'
     #s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
     

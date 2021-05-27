@@ -124,6 +124,14 @@ KG_FILE="${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Pods-QNNLib_Ex
 if [ -f "$KG_FILE" ]; then exit 0; fi
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 touch "$KG_FILE"
+KG_FILE="${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Pods-QNNLib_Example-resources-Installation-Flag"
+if [ -f "$KG_FILE" ]; then exit 0; fi
+mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
+touch "$KG_FILE"
+KG_FILE="${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Pods-QNNLib_Example-resources-Installation-Flag"
+if [ -f "$KG_FILE" ]; then exit 0; fi
+mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
+touch "$KG_FILE"
 set -u
 set -o pipefail
 

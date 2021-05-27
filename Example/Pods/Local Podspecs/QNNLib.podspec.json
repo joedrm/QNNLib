@@ -1,6 +1,6 @@
 {
   "name": "QNNLib",
-  "version": "0.1.1",
+  "version": "1.0.3",
   "summary": "QNNLib",
   "description": "Swift 私有组件库",
   "homepage": "https://github.com/wangdongyang/QNNLib",
@@ -13,10 +13,10 @@
   },
   "source": {
     "git": "https://github.com/wangdongyang/QNNLib.git",
-    "tag": "0.1.1"
+    "tag": "1.0.3"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "swift_versions": "5.0",
   "resource_bundles": {
