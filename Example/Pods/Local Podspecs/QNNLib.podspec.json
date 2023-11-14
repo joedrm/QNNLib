@@ -87,9 +87,6 @@
       "name": "UIComponents",
       "source_files": "QNNLib/Classes/UIComponents/**/*",
       "dependencies": {
-        "FSPagerView": [
-
-        ],
         "SnapKit": [
 
         ],

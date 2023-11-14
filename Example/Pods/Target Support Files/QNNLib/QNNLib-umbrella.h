@@ -11,6 +11,7 @@
 #endif
 
 #import "QNNLib-Bridging-Header.h"
+#import "FSPagerViewObjcCompat.h"
 #import "AnimationContoller.h"
 #import "SQPrintJsonLog.h"
 #import "Reachability.h"

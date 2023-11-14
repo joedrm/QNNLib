@@ -47,7 +47,7 @@ Pod::Spec.new do |s|
     # 封装的组件库
     s.subspec 'UIComponents' do |t|
         t.source_files = 'QNNLib/Classes/UIComponents/**/*'
-        t.dependency 'FSPagerView'
+#        t.dependency 'FSPagerView', '~> 0.8.3'
         t.dependency 'SnapKit'#, '~> 5.0.1'
         t.dependency 'Then'#, '~> 2.6.0'
         t.dependency 'QNNLib/Extension'

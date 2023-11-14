@@ -43,7 +43,7 @@ public class QNNImageLoadTool: NSObject {
     // 清除图片缓存
     public class func cleanCache(completion: @escaping (()->())){
         
-        SDWebImageManager.shared.imageCache.clear(with: .disk) {
+        SDWebImageManager.shared.imageCache.clear!(with: .disk) {
             completion()
         }
     }

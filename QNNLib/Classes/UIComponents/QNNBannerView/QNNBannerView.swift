@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FSPagerView
+//import FSPagerView
 
 public class QNNBannerView: UIView {
     
