@@ -1,10 +1,5 @@
 //
 //  UITextFieldExtension.swift
-//  PaydayLoan
-//
-//  Created by 张霄男 on 8/31/16.
-//  Copyright © 2016 QianShengQian, Inc. All rights reserved.
-//
 
 import UIKit
 

@@ -1,10 +1,5 @@
 //
 //  UIImageExtension.swift
-//  QQT
-//
-//  Created by 张霄男 on 15/9/17.
-//  Copyright (c) 2015年 qianshengqian.com. All rights reserved.
-//
 
 import UIKit
 

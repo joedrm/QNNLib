@@ -1,10 +1,5 @@
 //
 //  DarkModel.swift
-//  QNN
-//
-//  Created by Smalla on 2019/10/18.
-//  Copyright © 2019 qianshengqian. All rights reserved.
-//
 
 import Foundation
 

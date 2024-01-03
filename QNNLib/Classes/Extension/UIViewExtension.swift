@@ -1,10 +1,5 @@
 //
 //  UIViewExtension.swift
-//  QSQ
-//
-//  Created by 张霄男 on 15/7/21.
-//  Copyright (c) 2015年 QianShengQian, Inc. All rights reserved.
-//
 
 import UIKit
 import Toast

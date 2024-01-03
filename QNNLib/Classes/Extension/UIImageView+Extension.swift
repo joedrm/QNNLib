@@ -1,10 +1,5 @@
 //
 //  UIImageView+Extension.swift
-//  QNN
-//
-//  Created by Smalla on 2018/11/29.
-//  Copyright © 2018 qianshengqian. All rights reserved.
-//
 
 import Foundation
 import SDWebImage

@@ -1,10 +1,6 @@
 //
 //  QNNBannerView.swift
-//  QNN
-//
-//  Created by zhenyu on 17/4/5.
-//  Copyright © 2017年 qianshengqian. All rights reserved.
-//
+
 
 import UIKit
 //import FSPagerView
@@ -73,6 +69,7 @@ public class QNNBannerView: UIView {
         pageControl.numberOfPages = imageArray.count
         pageControl.currentPage = 0
         banner.reloadData()
+        banner.isInfinite = imageArray.count > 1
         DispatchQueue.main.async {
             if self.bannerNumberItems > 0 {
                 self.banner.scrollToItem(at: 0, animated: false)
@@ -87,6 +84,7 @@ public class QNNBannerView: UIView {
         pageControl.numberOfPages = imgsArray.count
         pageControl.currentPage = 0
         banner.reloadData()
+        banner.isInfinite = imgsArray.count > 1
         DispatchQueue.main.async {
             if self.bannerNumberItems > 0 {
                 self.banner.scrollToItem(at: 0, animated: false)
@@ -134,7 +132,8 @@ extension QNNBannerView: FSPagerViewDataSource, FSPagerViewDelegate {
         if imageArray.isEmpty {
             cell.imageView?.image = imgsArray[index]
         }else{
-            cell.imageView?.loadImage(urlStr: imageArray[index])
+            cell.imageView?.loadImage(urlStr: imageArray[index],
+                                      placeholderImage: QNNImageLoadTool.getImageFormMainBundle("banner_placeholder"))
         }
         cell.imageView?.contentMode = itemContentMode
         return cell
@@ -172,6 +171,13 @@ class QNNBannerItemViewCell:  FSPagerViewCell{
         
         imageView?.contentMode = .scaleAspectFit
         contentView.layer.shadowColor = UIColor.clear.cgColor
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        layer.cornerRadius = 12
+        clipsToBounds = true
     }
     
     /// 重写下面的属性去掉点击效果

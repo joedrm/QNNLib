@@ -3,8 +3,6 @@
 //  KFQ
 //
 //  Created by zhenyu on 17/4/26.
-//  Copyright © 2017年 qianshengqian. All rights reserved.
-//
 
 import Foundation
 

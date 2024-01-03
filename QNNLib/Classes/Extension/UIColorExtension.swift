@@ -1,10 +1,6 @@
 //
 //  UIColorExtension.swift
-//  QQT
-//
-//  Created by 张霄男 on 15/12/22.
-//  Copyright © 2015年 qianshengqian.com. All rights reserved.
-//
+
 import UIKit
 
 @objc public extension UIColor {

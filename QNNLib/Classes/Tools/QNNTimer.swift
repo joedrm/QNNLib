@@ -1,10 +1,6 @@
 //
 //  QNNTimer.swift
-//  QNN
-//
-//  Created by ymy on 2017/7/3.
-//  Copyright © 2017年 qianshengqian. All rights reserved.
-//
+
 
 import UIKit
 

@@ -1,10 +1,5 @@
 //
 //  QNNSearchBar.swift
-//  QNN
-//
-//  Created by wdy on 2018/9/3.
-//  Copyright © 2018年 qianshengqian. All rights reserved.
-//
 
 import UIKit
 import SnapKit

@@ -1,10 +1,5 @@
 //
 //  String+Extension.swift
-//  QNN
-//
-//  Created by Smalla on 2017/12/18.
-//  Copyright © 2017年 qianshengqian. All rights reserved.
-//
 
 import Foundation
 import UIKit

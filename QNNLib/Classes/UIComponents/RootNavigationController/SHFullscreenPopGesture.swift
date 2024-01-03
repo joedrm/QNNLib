@@ -213,6 +213,20 @@ public extension UIViewController {
                 objc_setAssociatedObject(self, RuntimeKey.KEY_sh_interactivePopDisabled!, newValue, .OBJC_ASSOCIATION_ASSIGN)
             }
         }
+    
+        var sh_interactivePopEvent: () -> Bool {
+            get {
+                guard let event = objc_getAssociatedObject(self, RuntimeKey.KEY_sh_interactivePopEvent!) as? (() -> Bool) else {
+                    return {
+                        return true
+                    }
+                }
+                return event
+            }
+            set {
+                objc_setAssociatedObject(self, RuntimeKey.KEY_sh_interactivePopEvent!, newValue, .OBJC_ASSOCIATION_RETAIN)
+            }
+        }
         
         /// Indicate this view controller prefers its navigation bar hidden or not,
         /// checked when view controller based navigation bar's appearance is enabled.
@@ -270,6 +284,8 @@ private class _SHFullscreenPopGestureRecognizerDelegate: NSObject, UIGestureReco
             return false
         }
         
+        
+
         // Ignore pan gesture when the navigation controller is currently in transition.
         guard let trasition = navigationC.value(forKey: "_isTransitioning") as? Bool else {
             return false
@@ -295,6 +311,9 @@ private class _SHFullscreenPopGestureRecognizerDelegate: NSObject, UIGestureReco
             return false
         }
         
+        if !topViewController.sh_interactivePopEvent() {
+            return topViewController.sh_interactivePopEvent()
+        }
         return true
     }
 }
@@ -304,6 +323,8 @@ fileprivate struct RuntimeKey {
         = UnsafeRawPointer(bitPattern: "KEY_sh_willAppearInjectBlockContainer".hashValue)
     static let KEY_sh_interactivePopDisabled
         = UnsafeRawPointer(bitPattern: "KEY_sh_interactivePopDisabled".hashValue)
+    static let KEY_sh_interactivePopEvent
+        = UnsafeRawPointer(bitPattern: "KEY_sh_interactivePopEvent".hashValue)
     static let KEY_sh_prefersNavigationBarHidden
         = UnsafeRawPointer(bitPattern: "KEY_sh_prefersNavigationBarHidden".hashValue)
     static let KEY_sh_interactivePopMaxAllowedInitialDistanceToLeftEdge

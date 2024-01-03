@@ -1,10 +1,5 @@
 //
 //  StringExtension.swift
-//  QNN
-//
-//  Created by zhenyu on 17/3/27.
-//  Copyright © 2017年 qianshengqian. All rights reserved.
-//
 
 import Foundation
 

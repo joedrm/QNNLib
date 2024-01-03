@@ -1,10 +1,5 @@
 //
 //  QNNSegmentBar.swift
-//  QNN
-//
-//  Created by joewang on 2018/9/28.
-//  Copyright © 2018年 qianshengqian. All rights reserved.
-//
 
 import UIKit
 public protocol QNNSegmentBarDelegate : class{

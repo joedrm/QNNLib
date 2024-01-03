@@ -1,10 +1,6 @@
 //
 //  UIView+Extension.swift
-//  QNN
-//
-//  Created by joewang on 2018/9/7.
-//  Copyright © 2018年 qianshengqian. All rights reserved.
-//
+
 
 import Foundation
 import Then

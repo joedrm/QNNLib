@@ -1,10 +1,5 @@
 //
 //  UIView+Animation.swift
-//  QNN
-//
-//  Created by joewang on 2018/11/7.
-//  Copyright © 2018 qianshengqian. All rights reserved.
-//
 
 import Foundation
 

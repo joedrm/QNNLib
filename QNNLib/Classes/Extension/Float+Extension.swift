@@ -1,10 +1,5 @@
 //
 //  Float+Extension.swift
-//  QNN
-//
-//  Created by joewang on 2018/12/14.
-//  Copyright © 2018 qianshengqian. All rights reserved.
-//
 
 import Foundation
 

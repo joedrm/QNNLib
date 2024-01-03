@@ -1,10 +1,5 @@
 //
 //  QNNFitsizeTool.swift
-//  QNN
-//
-//  Created by joewang on 2018/10/31.
-//  Copyright © 2018 qianshengqian. All rights reserved.
-//
 
 import UIKit
 
